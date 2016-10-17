@@ -1,0 +1,21 @@
+copy nsMySQL.dll file to %programfiles%\NSIS\Plugins
+-------------------------------------------------------------
+functions
+
+nsMySQL::ExecSQL User Passwd Host Port SQL
+nsMySQL::ExecSQLFromFile User Passwd Host Port FileName
+nsMySQL::ExecSQLCreateUser User Passwd Host Port UserAccess UserName UserHost UserPasswd SQL
+nsMySQL::ExecSQLFromFileCreateUser User Passwd Host Port UserAccess UserName UserHost UserPasswd FileName
+
+Params
+
+User: user of database connection
+Passwd: password of user
+Host: address database server (default: 'localhost')
+Port: port to access database (default: '3306')
+
+FileName: is a full filename of an SQL script
+UserAccess: Database or table that created user can access use. '*.*' to full access
+UserName: Name of new user
+UserHost: allow access only for a specified host. use '%' to access from any host
+UserPasswd: password of new user
